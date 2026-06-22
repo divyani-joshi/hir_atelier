@@ -277,7 +277,16 @@ Share your vision and our atelier will transform it into something extraordinary
   <section className="mt-stack-md reveal">
     <div className="relative w-full h-[400px] rounded-3xl overflow-hidden border border-white/60">
      <div className="w-full h-full">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.5202409273993!2d72.56239377510705!3d23.11465197910931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83b7d6ea917b%3A0xde5db3db7414e663!2sDev%20Home%20Town%204!5e0!3m2!1sen!2sin!4v1782147775933!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe
+  title="Location Map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.5202409273993!2d72.56239377510705!3d23.11465197910931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83b7d6ea917b%3A0xde5db3db7414e663!2sDev%20Home%20Town%204!5e0!3m2!1sen!2sin!4v1782147775933!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
 </div>
     </div>
   </section>
