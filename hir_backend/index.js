@@ -39,12 +39,16 @@ const { UpdateGallery } = require("./apis/admin/UpdateGallery");
 
 app.use(express.json());
 app.use(cors({
-  origin: true  [
-    "https://hir-atelier.vercel.app"
-  ],
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: true,
+  credentials: true
 }));
+// app.use(cors({
+//   origin: true  [
+//     "https://hir-atelier.vercel.app"
+//   ],
+//   credentials: true,
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+// }));
 app.use("/uploads", express.static("uploads"));
 connectDB();
 
