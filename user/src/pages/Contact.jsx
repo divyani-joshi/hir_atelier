@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../utility/AxiosConfig";
 import CheckToken from "../utility/CheckToken";
+import { Link } from 'react-router-dom'
 
 function Contact() {
   return (
