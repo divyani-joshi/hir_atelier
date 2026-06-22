@@ -296,7 +296,7 @@ const handleBooking = async (e) => {
         services?.map((value) => (
           <>
             <div key = {value._id} className="group relative aspect-[3/4] overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-        <img alt="Bridal Mehendi" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src={`http://localhost:8000/uploads/${value.image.split("\\").pop()}`} />
+        <img alt="Bridal Mehendi" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"src={`https://hir-atelier.onrender.com/uploads/${value.image.split("\\").pop()}`} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8">
           <h3 className="font-headline-md text-headline-md text-white mb-2">{value.title}</h3>
           <p className="text-white/70 font-body-md text-body-md">{value.description}</p>

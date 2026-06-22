@@ -281,7 +281,7 @@ const startPayment = async (
             {services?.map ((value => (
               <>
                  <div key={value._id} className="group relative aspect-[3/4] overflow-hidden rounded-xl cursor-pointer">
-                <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a luxury embroidered roomal with gold threads and intricate traditional patterns on ivory silk fabric. The lighting is soft and warm, emphasizing the texture of the hand-stitching." src={`http://localhost:8000/uploads/${value.image.split("\\").pop()}`} />
+                <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a luxury embroidered roomal with gold threads and intricate traditional patterns on ivory silk fabric. The lighting is soft and warm, emphasizing the texture of the hand-stitching." src={`https://hir-atelier.onrender.com/uploads/${value.image.split("\\").pop()}`} />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8">
                   <h3 className="font-headline-md text-headline-md text-white mb-2">{value.title}</h3>
                   <p className="text-white/80 font-body-md text-sm">{value.description}</p>

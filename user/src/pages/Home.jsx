@@ -106,7 +106,7 @@ const serviceLinks = [
     >
       <img
       
-        src={`http://localhost:8000/uploads/${value.image.split("\\").pop()}`}
+       src={`https://hir-atelier.onrender.com/uploads/${value.image.split("\\").pop()}`}
         alt={value.name}
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />

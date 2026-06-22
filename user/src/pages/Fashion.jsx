@@ -284,7 +284,7 @@ await startPayment(
           </>
         ):(services?.map((value =>(
           <> <div key={value._id} className="group relative overflow-hidden aspect-[3/4] reveal" style={{transitionDelay: '100ms'}}>
-             <img alt="Couture" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src={`http://localhost:8000/uploads/${value.image.split("\\").pop()}`} />
+             <img alt="Couture" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src={`https://hir-atelier.onrender.com/uploads/${value.image.split("\\").pop()}`} />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="absolute bottom-0 left-0 p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
             <h3 className="font-headline-md text-headline-md mb-2">{value.title}</h3>

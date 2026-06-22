@@ -117,7 +117,7 @@ function CategoryContent(){
           <div className="flex items-center gap-4">
             <div className="w-20 h-20 rounded-lg bg-surface-container overflow-hidden border border-outline-variant/20">
               <img
-                src={`http://localhost:8000/uploads/${value.image.split("\\").pop()}`}
+               src={`https://hir-atelier.onrender.com/uploads/${value.image.split("\\").pop()}`}
                 alt={value.categoryName}
                 className="w-full h-full object-cover"
               />

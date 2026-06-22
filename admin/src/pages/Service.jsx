@@ -96,7 +96,7 @@ function ServiceContent (){
                 <td className="px-lg py-4">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-lg bg-surface-container overflow-hidden border border-outline-variant/20">
-                      <img alt="Leather Armchair" className="w-full h-full object-cover" data-alt="Close-up of a premium designer leather armchair in a cognac brown shade, resting in a bright studio environment with soft shadows. The lighting is diffused and professional, showcasing the rich texture of the grain. Minimalist, modern aesthetic with a focus on artisanal craftsmanship and high-end materials." src={`http://localhost:8000/uploads/${value.image.split("\\").pop()}`} />
+                      <img alt="Leather Armchair" className="w-full h-full object-cover" data-alt="Close-up of a premium designer leather armchair in a cognac brown shade, resting in a bright studio environment with soft shadows. The lighting is diffused and professional, showcasing the rich texture of the grain. Minimalist, modern aesthetic with a focus on artisanal craftsmanship and high-end materials." src={`https://hir-atelier.onrender.com/uploads/${value.image.split("\\").pop()}`} />
                     </div>
                     <div>
                       <p className="font-body-md font-semibold text-on-surface">{value.title}</p>
