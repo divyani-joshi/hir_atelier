@@ -39,7 +39,7 @@ const { UpdateGallery } = require("./apis/admin/UpdateGallery");
 
 app.use(express.json());
 app.use(cors({
-  origin: [
+  origin: true [
     "http://localhost:3000",
     "http://localhost:3001",
     "http://localhost:5173",
