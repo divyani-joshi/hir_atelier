@@ -60,7 +60,6 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.post("/user/signup", Signup)
 app.post("/user/login", Login)
-app.post("/admin/login", Login)
 
 app.get("/user/getcategories", GetCategories)
 app.get("/user/getservices" , GetServices)
