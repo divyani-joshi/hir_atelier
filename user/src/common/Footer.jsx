@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
     <div className="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto gap-gutter">
       <div className="flex flex-col items-center md:items-start gap-2">
         <div className="font-headline-md text-headline-md text-primary">HiR Atelier</div>
-        <p className="font-body-md text-body-md text-on-surface-variant">© 2024 HiR Atelier. All rights reserved.</p>
+        <p className="font-body-md text-body-md text-on-surface-variant">© 2026 HiR Atelier. All rights reserved. Developed by Divyani Joshi </p>
       </div>
       <div className="flex gap-8">
         <a className="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
@@ -27,22 +28,31 @@ function Footer() {
     </div>
   </footer>
   <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white/80 backdrop-blur-lg border-t border-white/20 z-50 flex justify-around items-center py-4 px-6">
-    <a className="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+    <Link className="flex flex-col items-center gap-1 text-on-surface-variant" to="/">
       <span className="material-symbols-outlined">home</span>
       <span className="text-[10px] font-label-caps">Home</span>
-    </a>
-    <a className="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+    </Link>
+    <Link className="flex flex-col items-center gap-1 text-on-surface-variant" to="/service">
       <span className="material-symbols-outlined">auto_awesome</span>
       <span className="text-[10px] font-label-caps">Services</span>
-    </a>
-    <a className="flex flex-col items-center gap-1 text-primary" href="#">
+    </Link>
+    <Link className="flex flex-col items-center gap-1 text-primary" to="/collection">
       <span className="material-symbols-outlined" style={{fontVariationSettings: '"FILL" 1'}}>gallery_thumbnail</span>
-      <span className="text-[10px] font-label-caps">Portfolio</span>
-    </a>
-    <a className="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
+      <span className="text-[10px] font-label-caps">Collection</span>
+    </Link>
+    <Link className="flex flex-col items-center gap-1 text-on-surface-variant" to="/contact">
       <span className="material-symbols-outlined">contact_page</span>
       <span className="text-[10px] font-label-caps">Contact</span>
-    </a>
+    </Link>
+    <Link to="/blog" className="flex flex-col items-center gap-1 text-on-surface-variant">
+  <span className="material-symbols-outlined">article</span>
+  <span className="text-[10px]">Blog</span>
+</Link>
+
+<Link to="/profile" className="flex flex-col items-center gap-1 text-on-surface-variant">
+  <span className="material-symbols-outlined">person</span>
+  <span className="text-[10px]">Profile</span>
+</Link>
   </nav>
 </div>
 
