@@ -105,7 +105,7 @@ Share your vision and our atelier will transform it into something extraordinary
             <span className="material-symbols-outlined text-[20px]" style={{fontVariationSettings: '"FILL" 1'}}>call</span>
           </div>
           <h3 className="text-lg font-semibold mb-1">Phone</h3>
-          <p className="text-on-surface-variant font-body-md">+1 (555) 012-3456</p>
+          <p className="text-on-surface-variant font-body-md">+91 8320332732</p>
           <p className="text-on-surface-variant/50 text-[10px] uppercase tracking-wider mt-1">Mon-Fri, 9am-6pm</p>
         </div>
         <div className="glass p-6 rounded-2xl border border-white/60 group hover:border-primary-container/40 transition-all duration-500">
@@ -113,7 +113,7 @@ Share your vision and our atelier will transform it into something extraordinary
             <span className="material-symbols-outlined text-[20px]" style={{fontVariationSettings: '"FILL" 1'}}>mail</span>
           </div>
           <h3 className="text-lg font-semibold mb-1">Email</h3>
-          <p className="text-on-surface-variant font-body-md">concierge@hiratelier.com</p>
+          <p className="text-on-surface-variant font-body-md">divyanijoshi23@gmail.com</p>
           <p className="text-on-surface-variant/50 text-[10px] uppercase tracking-wider mt-1">Response within 24 hours</p>
         </div>
         <div className="glass p-6 rounded-2xl border border-white/60 group hover:border-primary-container/40 transition-all duration-500">
@@ -121,7 +121,7 @@ Share your vision and our atelier will transform it into something extraordinary
             <span className="material-symbols-outlined text-[20px]" style={{fontVariationSettings: '"FILL" 1'}}>location_on</span>
           </div>
           <h3 className="text-lg font-semibold mb-1">Location</h3>
-          <p className="text-on-surface-variant font-body-md">42 Artisan Grove, Suite 101<br />Fashion District, NY 10018</p>
+          <p className="text-on-surface-variant font-body-md">Dev Hometown 4,L501 ,Chandkheda<br />Ahmedabad, Gujarat, India</p>
         </div>
        
       </div>
@@ -266,18 +266,19 @@ Share your vision and our atelier will transform it into something extraordinary
     </div>
   </div>
   {/* Map Section */}
+  <a
+  href="https://www.google.com/maps/place/Dev+Home+Town+4/@23.114652,72.5623938,17z/data=!3m1!4b1!4m6!3m5!1s0x395e83b7d6ea917b:0xde5db3db7414e663!8m2!3d23.114652!4d72.5649687!16s%2Fg%2F11h1fkx8qt?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block bg-primary text-on-primary px-6 py-3 rounded-full mt-4"
+>
+  Get Directions
+</a>
   <section className="mt-stack-md reveal">
     <div className="relative w-full h-[400px] rounded-3xl overflow-hidden border border-white/60">
-      <div className="absolute inset-0 bg-surface-container-highest flex items-center justify-center">
-        <div className="text-center z-10 px-8">
-          <span className="material-symbols-outlined text-primary text-4xl mb-3" style={{fontVariationSettings: '"FILL" 1'}}>location_on</span>
-          <h2 className="text-xl font-bold mb-1">Our New York Studio</h2>
-          <p className="text-on-surface-variant text-[14px] mb-6">42 Artisan Grove, Suite 101, New York, NY 10018</p>
-          <button className="bg-white/80 backdrop-blur-sm text-primary px-6 py-2.5 rounded-full text-[12px] font-semibold uppercase tracking-wider border border-white/60 hover:bg-primary hover:text-white transition-all">Get Directions</button>
-        </div>
-        {/* Placeholder Map Image */}
-        <img className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-multiply" data-alt="A sophisticated, minimalist architectural map visualization of a luxury fashion district in New York City." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUsa2RbqPyTiK3LdAGUAg19nOqAnpRWJia7rdLwOKYEt5S7h-WTNEpBOhY_H2cp1POsmby2tL7nvFnP7ce2n_chYUl6bTOJwh1sNU1Mq-CMRI91wkQYIgukcb1L7E-0bSFvBq7qvyYGHs0QAf_vBAEWyvlkZy86fOYtJ2rlhP6iNcsfov3VZpSDHunFzTvWLqOpsWsy3bNq7Y8PsP23xzWrN0cu7dNN5MNtxj0WOrfVd1tjWxUtTDM7PD3tTELg5_EFW8lxgB4j8c" />
-      </div>
+     <div className="w-full h-full">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.5202409273993!2d72.56239377510705!3d23.11465197910931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83b7d6ea917b%3A0xde5db3db7414e663!2sDev%20Home%20Town%204!5e0!3m2!1sen!2sin!4v1782147775933!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
     </div>
   </section>
   {/* CTA Bottom */}
