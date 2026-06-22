@@ -64,7 +64,7 @@ const serviceLinks = [
         <>
        <header className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
   <div className="absolute inset-0 z-0">
-    <img alt="HiR Atelier Creative Studio" className="w-full h-[120%] object-cover absolute -top-[10%]" id="hero-parallax" src="file:///c%3A/Users/DIVYANI%20JOSHI/Desktop/HiR%20Atelier/user/hero%20%282%29.png" />
+    <img alt="HiR Atelier Creative Studio" className="w-full h-[120%] object-cover absolute -top-[10%]" id="hero-parallax" src="/hero (2).png" />
     <div className="absolute inset-0 bg-black/20" />
   </div>
   <div className="relative z-10 px-margin-mobile md:px-margin-desktop w-full text-white">
