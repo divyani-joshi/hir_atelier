@@ -39,7 +39,7 @@ const { UpdateGallery } = require("./apis/admin/UpdateGallery");
 
 app.use(express.json());
 app.use(cors({
-  origin:  [
+  origin: true  [
     "https://hir-atelier.vercel.app"
   ],
   credentials: true,
