@@ -70,7 +70,7 @@ function ServiceContent (){
         ):(bridal && (
             <>
                 <div className="w-full md:w-1/2 service-card group overflow-hidden rounded-xl bg-surface-container-low">
-          <img alt="Bridal Mehendi Artistry" className="w-full h-[600px] object-cover service-card-image" data-alt="Close up of intricate bridal henna patterns on hands, styled in a minimalist and luxury fashion. The lighting is soft and warm, highlighting the champagne gold jewelry and silk fabrics in the background. The mood is serene and exclusive, reflecting a high-couture bridal artistry aesthetic with a soft beige and ivory color palette." src={`http://localhost:8000/uploads/${bridal.image.split("\\").pop()}`} />
+          <img alt="Bridal Mehendi Artistry" className="w-full h-[600px] object-cover service-card-image" data-alt="Close up of intricate bridal henna patterns on hands, styled in a minimalist and luxury fashion. The lighting is soft and warm, highlighting the champagne gold jewelry and silk fabrics in the background. The mood is serene and exclusive, reflecting a high-couture bridal artistry aesthetic with a soft beige and ivory color palette." src={`https://hir-atelier.onrender.com/uploads/${bridal.image.split("\\").pop()}`} />
         </div>
         <div className="w-full md:w-1/2 md:pl-12">
           <span className="font-label-caps text-label-caps text-primary tracking-widest mb-4 block">ARTISTRY</span>
@@ -122,7 +122,7 @@ function ServiceContent (){
           </Link>
         </div>
         <div className="w-full md:w-1/2 service-card group overflow-hidden rounded-xl bg-surface-container-low">
-          <img alt="Custom Fashion Design" className="w-full h-[600px] object-cover service-card-image" data-alt="A luxury fashion atelier setting with an ivory silk bridal gown draped over a professional mannequin. Soft sunlight filters through tall windows, illuminating rolls of champagne colored fabric and sketches. The aesthetic is clean, sophisticated, and minimalist, emphasizing the high-end craftsmanship of the couture design process." src={`http://localhost:8000/uploads/${fashion.image.split("\\").pop()}`} />
+          <img alt="Custom Fashion Design" className="w-full h-[600px] object-cover service-card-image" data-alt="A luxury fashion atelier setting with an ivory silk bridal gown draped over a professional mannequin. Soft sunlight filters through tall windows, illuminating rolls of champagne colored fabric and sketches. The aesthetic is clean, sophisticated, and minimalist, emphasizing the high-end craftsmanship of the couture design process." src={`https://hir-atelier.onrender.com/uploads/${fashion.image.split("\\").pop()}`} />
         </div>
             </>
           )
@@ -142,7 +142,7 @@ function ServiceContent (){
     <img
       alt="Handmade Products"
       className="w-full h-[600px] object-cover service-card-image"
-      src={`http://localhost:8000/uploads/${craft.image.split("\\").pop()}`}
+      src={`https://hir-atelier.onrender.com/uploads/${craft.image.split("\\").pop()}`}
     />
   </div>
 

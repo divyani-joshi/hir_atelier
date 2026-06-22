@@ -191,7 +191,7 @@ useEffect(() => {
                   className="group relative aspect-[3/4] overflow-hidden rounded-xl"
                 >
                   <img
-                    src={`http://localhost:8000/${img.replace(
+                    src={`https://hir-atelier.onrender.com/${img.replace(
                       /\\/g,
                       "/"
                     )}`}
