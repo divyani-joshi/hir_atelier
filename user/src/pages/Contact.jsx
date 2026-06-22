@@ -294,9 +294,9 @@ Share your vision and our atelier will transform it into something extraordinary
   <section className="mt-stack-md text-center py-20 glass rounded-3xl border border-white/60 reveal">
     <h2 className="text-2xl md:text-3xl font-bold text-on-surface mb-5 tracking-tight">Every handmade creation begins with a conversation.</h2>
     <p className="text-on-surface-variant text-[15px] max-w-xl mx-auto mb-8 leading-relaxed">Ready to start your bespoke journey? Schedule a one-on-one consultation with our lead designer today.</p>
-    <button className="bg-primary text-on-primary px-10 py-3.5 rounded-full font-semibold text-[15px] hover:bg-primary/95 transition-all duration-300">
+    <Link className="bg-primary text-on-primary px-10 py-3.5 rounded-full font-semibold text-[15px] hover:bg-primary/95 transition-all duration-300" to="/service">
       Book Consultation
-    </button>
+    </Link>
   </section>
 </main>
 
