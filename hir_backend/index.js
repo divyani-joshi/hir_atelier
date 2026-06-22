@@ -1,9 +1,9 @@
 require("dotenv").config();
 const express = require("express")
+const cors = require("cors")
 const path = require("path");
 const app = express();
 const PORT = 8000;
-const cors = require("cors");
 const connectDB = require("./db/dbconnnect");
 const { Signup } = require("./apis/common/signup");
 const { Login } = require("./apis/common/login");
@@ -43,7 +43,8 @@ app.use(cors({
     "http://localhost:3000",
     "http://localhost:3001",
     "http://localhost:5173",
-    "http://localhost:5174"
+    "http://localhost:5174",
+    "https://hir-atelier.vercel.app/service"
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"],
