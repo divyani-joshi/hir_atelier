@@ -14,7 +14,7 @@ import Logout from "./common/Logout"
 import Profile from "./pages/Profile"
 import RouteLoader from "./common/RouteLoader";
 import ScrollToTop from "./pages/ScrollToTop"
-import Feedback from "./pages/Feedback"
+import FeedbackForm from "./pages/Feedback"
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
            <Route path="/mehendi/:category_id" element={<Mehendi/>}/>
            <Route path="/fashion/:category_id" element={<Fashion/>}/>
            <Route path="/craft/:category_id" element={<Crafts/>}/>
-           <Route path="/feedback" element={<Feedback/>}/>
+           <Route path="/feedback" element={<FeedbackForm/>}/>
         </Routes>
         </RouteLoader>
       </BrowserRouter>

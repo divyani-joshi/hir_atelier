@@ -1,4 +1,6 @@
+
 import { useState } from "react";
+import api from "../utility/AxiosConfig";
 
 function FeedbackForm() {
   const [formData, setFormData] = useState({
@@ -7,28 +9,63 @@ function FeedbackForm() {
     rating: "",
   });
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await api.post("/user/addfeedback", {
+        name: formData.name,
+        message: formData.message,
+        rating: formData.rating,
+      });
+
+      alert("Feedback submitted successfully");
+
+      console.log(response.data);
+
+      setFormData({
+        name: "",
+        message: "",
+        rating: "",
+      });
+    } catch (error) {
+      console.log(error);
+      alert(
+        error.response?.data?.message ||
+          "Failed to submit feedback"
+      );
+    }
+  };
+
   return (
-    <form className="space-y-4">
+    <form className="space-y-4" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Your Name"
         value={formData.name}
         onChange={(e) =>
-          setFormData({ ...formData, name: e.target.value })
+          setFormData({
+            ...formData,
+            name: e.target.value,
+          })
         }
         className="w-full border p-3 rounded-lg"
+        required
       />
 
       <textarea
         placeholder="Your Feedback"
         value={formData.message}
         onChange={(e) =>
-          setFormData({ ...formData, message: e.target.value })
+          setFormData({
+            ...formData,
+            message: e.target.value,
+          })
         }
         className="w-full border p-3 rounded-lg"
+        required
       />
 
-      {/* Rating Dropdown */}
       <select
         value={formData.rating}
         onChange={(e) =>
@@ -38,6 +75,7 @@ function FeedbackForm() {
           })
         }
         className="w-full border p-3 rounded-lg"
+        required
       >
         <option value="">Select Rating</option>
         <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
@@ -57,4 +95,5 @@ function FeedbackForm() {
   );
 }
 
-export default {FeedbackForm}
+export default FeedbackForm;
+
