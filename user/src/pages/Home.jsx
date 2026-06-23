@@ -27,7 +27,7 @@ function HomeContent (){
     try{
       setLoading(true);
 
-      const res = await api.get("/user/getfeedback");
+      const res = await api.get("/user/getfeedbacks");
 
       console.log("suceess:", res);
 
