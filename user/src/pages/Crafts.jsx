@@ -402,7 +402,7 @@ className="rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl duration-500 g
 >
 
 <img
-src={`http://localhost:8000/${img.replace(/\\/g,"/")}`}
+src={`https://hir-atelier.onrender.com/${img.replace(/\\/g,"/")}`}
 alt=""
 className="w-full h-80 object-cover group-hover:scale-110 duration-500"
 />

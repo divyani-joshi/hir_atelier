@@ -354,7 +354,7 @@ const handleBooking = async (e) => {
       className="group overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-500"
     >
       <img
-        src={`http://localhost:8000/${img.replace(/\\/g, "/")}`}
+        src={`https://hir-atelier.onrender.com/${img.replace(/\\/g, "/")}`}
         alt=""
         className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
       />

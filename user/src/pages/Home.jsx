@@ -21,6 +21,32 @@ function HomeContent (){
    let [categories, setCategories ] = useState([]);
    let [loading , setLoading] = useState(false);
    let [ error, setError] = useState("");
+   let[feedback, setFeedback] = useState([]);
+
+   async function FetchFeedback() {
+    try{
+      setLoading(true);
+
+      const res = await api.get("/user/addfeedback");
+
+      console.log("suceess:", res);
+
+      setFeedback(res.data?.feedback || []);
+    }catch(e){
+       console.log("Full Error:", e);
+    console.log("Response:", e.response);
+    console.log("Data:", e.response?.data);
+    console.log("Status:", e.response?.status);
+
+    setError(e.response?.data?.message || e.message);
+    }finally {
+    setLoading(false);
+  }
+   }
+
+   useEffect(() => {
+    FetchFeedback();
+   },[])
    
    async function FetchCategories() {
   try {
@@ -371,43 +397,62 @@ const serviceLinks = [
     </div>
   </section>
   {/* Testimonials */}
-  <section className="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-      <div className="bg-surface-container-low p-10 rounded-2xl reveal">
-        <div className="flex text-primary mb-6">
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
+ <section className="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+
+    {feedback.length > 0 ? (
+      feedback.map((feedback, index) => (
+        <div
+          key={feedback._id}
+          className="bg-surface-container-low p-10 rounded-2xl reveal"
+          style={{ transitionDelay: `${index * 150}ms` }}
+        >
+          {/* Rating */}
+          <div className="flex text-primary mb-6">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <span
+                key={star}
+                className="material-symbols-outlined"
+                data-weight="fill"
+              >
+                {star <= feedback.rating ? "star" : "star_outline"}
+              </span>
+            ))}
+          </div>
+
+          {/* Feedback Message */}
+          <p className="font-body-lg italic mb-8">
+            "{feedback.message}"
+          </p>
+
+          {/* User Name */}
+          <p className="font-label-caps tracking-widest uppercase">
+            {feedback.name}
+          </p>
         </div>
-        <p className="font-body-lg italic mb-8">"HiR Atelier transformed my wedding day. The mehendi was so intricate that guests couldn't stop staring. Truly an artist at work."</p>
-        <p className="font-label-caps tracking-widest uppercase">Sanya Malhotra</p>
+      ))
+    ) : (
+      <div className="col-span-full text-center py-10">
+        <p className="text-lg text-gray-500">
+          No feedback available yet.
+        </p>
       </div>
-      <div className="bg-surface-container-low p-10 rounded-2xl reveal" style={{transitionDelay: '150ms'}}>
-        <div className="flex text-primary mb-6">
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-        </div>
-        <p className="font-body-lg italic mb-8">"I ordered a custom jewelry set and a potli bag. The craftsmanship is world-class. You can feel the soul in every bead."</p>
-        <p className="font-label-caps tracking-widest uppercase">Elena Rodriguez</p>
-      </div>
-      <div className="bg-surface-container-low p-10 rounded-2xl reveal" style={{transitionDelay: '300ms'}}>
-        <div className="flex text-primary mb-6">
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-          <span className="material-symbols-outlined" data-icon="star" data-weight="fill">star</span>
-        </div>
-        <p className="font-body-lg italic mb-8">"Their attention to detail is unmatched. The custom gown fit like a glove and the design process was so professional."</p>
-        <p className="font-label-caps tracking-widest uppercase">Priya Sharma</p>
-      </div>
-    </div>
-  </section>
+    )}
+
+  </div>
+
+  {/* Feedback Button */}
+  <div className="flex justify-center mt-12">
+    <Link
+      to="/feedback"
+      className="px-8 py-3 rounded-full bg-primary text-white hover:opacity-90 transition"
+    >
+      Share Your Experience
+    </Link>
+  </div>
+
+</section>
   {/* Final CTA */}
   <section className="mt-stack-xl bg-[#A38F7A] text-white py-24 px-margin-mobile reveal">
     <div className="max-w-4xl mx-auto text-center">

@@ -35,6 +35,7 @@ const { ContactUs } = require("./apis/user/Contact");
 const { GenerateOrder } = require("./apis/user/GenerateOrder");
 const { VerifyPayment } = require("./apis/user/VerifyPayment");
 const { UpdateGallery } = require("./apis/admin/UpdateGallery");
+const { AddFeedback } = require("./apis/user/AddFeedback");
 
 
 app.use(express.json());
@@ -79,6 +80,7 @@ app.get("/user/getgallery/:service", GetGallery)
 app.post("/user/contact", AuthMiddleWare,ContactUs)
 app.post("/generate-order", AuthMiddleWare, GenerateOrder)
 app.post("/verify-payment", AuthMiddleWare, VerifyPayment)
+app.post("/user/addfeedback" , AddFeedback)
 
 app.get("/admin/getusers",AuthMiddleWare,  GetUser)
 app.get("/admin/getorders", AuthMiddleWare, GetOrder)
