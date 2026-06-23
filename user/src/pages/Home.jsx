@@ -29,7 +29,7 @@ function HomeContent (){
 
       const res = await api.get("/user/getfeedbacks");
 
-      console.log("suceess:", res);
+      console.log("Feedback Response:", res.data);
 
       setFeedback(res.data?.feedbacks || []);
     }catch(e){
