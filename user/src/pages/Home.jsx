@@ -31,7 +31,7 @@ function HomeContent (){
 
       console.log("suceess:", res);
 
-      setFeedback(res.data?.feedback || []);
+      setFeedback(res.data?.feedbacks || []);
     }catch(e){
        console.log("Full Error:", e);
     console.log("Response:", e.response);
