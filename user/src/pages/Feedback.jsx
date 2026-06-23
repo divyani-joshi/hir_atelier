@@ -30,6 +30,10 @@ function FeedbackForm() {
       });
     } catch (error) {
       console.log(error);
+      console.log("Full Error:", error);
+  console.log("Response:", error.response);
+  console.log("Data:", error.response?.data);
+  console.log("Status:", error.response?.status);
       alert(
         error.response?.data?.message ||
           "Failed to submit feedback"
